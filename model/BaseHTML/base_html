@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Página que muestra imagenes traídas de Instagram.">
+    <meta name="author" content="MikeAndBlak">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/galeria.css" rel="stylesheet">
+    <title>Imagenes Instagram</title>
+</head>
+
+<body>
+    <div class="col-lg-12">
+        <h1 class="page-header">Galería Instagram</h1>
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="https://github.com/mikeandblak">Ir a GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+<!--aqui-->
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Mike&Black 2015</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
