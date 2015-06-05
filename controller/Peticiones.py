@@ -63,7 +63,7 @@ class Peticiones:
         """
         try:
             a = sys.path
-            archivos = str(a[0])+'/Responsive'
+            archivos = str(a[0])+'/model/Skeleton'
             proyecto = str(a[0])+'/' + nombre_proyecto
             shutil.copytree(archivos, proyecto)
         except Exception, e:
@@ -77,7 +77,7 @@ class Peticiones:
         """
 
         try:
-            archivo_log = open('Logs/twitter.error', 'a+')
+            archivo_log = open('logs/twitter.error', 'a+')
             archivo_log.write(error + '\n')
             archivo_log.close()
         except IOError, e:
@@ -90,7 +90,7 @@ class Peticiones:
         :param error: Error que se guardará
         """
         try:
-            archivo_log = open('Logs/instagram.error', 'a+')
+            archivo_log = open('logs/instagram.error', 'a+')
             archivo_log.write(error + '\n')
             archivo_log.close()
         except IOError, e:
@@ -103,7 +103,7 @@ class Peticiones:
         :param error: Error que se guardará
         """
         try:
-            archivo_log = open('Logs/log.error', 'a+')
+            archivo_log = open('logs/log.error', 'a+')
             archivo_log.write(error + '\n')
             archivo_log.close()
         except IOError, e:

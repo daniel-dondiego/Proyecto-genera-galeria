@@ -32,16 +32,16 @@ li, ul{
 
 body {
     padding-top: 70px; 
-    background-color: #D9D8D6;
-    color: #590207;
+    background-color: #C2E0FF;
+    color: #3399FF;
 }
 
 .informacion {
-	color: #0E0D0B; 
+	color: #262523; 
 }
 
 .navbar-inverse{
-	background-color: #720002;
+	background-color: #00CCFF;
 }
 
 .thumbnail{
