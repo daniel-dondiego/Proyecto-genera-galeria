@@ -26,9 +26,9 @@ class Run:
 
     def menu_busqueda(self):
         Peticiones.limpiar_pantalla()  # "Limpia" la consola
-        cprint('\t\t\tGenerador de Galería ordenada', 'yellow', attrs=['bold'])  # Título
+        cprint('\t\t\tGalería de fotos', 'blue', attrs=['bold'])  # Título
         self.__menu_tipo_busqueda__()  # Muestra el menú
-        modo_busqueda = Peticiones.pedir_numero('Elige una opcion: ', 1, 3)  # Pide y guarda la opción elegida
+        modo_busqueda = Peticiones.pedir_numero('Escoge la acción que desees realizar: ', 1, 3)  # Pide y guarda la opción elegida
         if modo_busqueda is 1:
             self.__busqueda_tag__()  # Si eligió opción 1 buscar por tag
         elif modo_busqueda is 2:
@@ -38,15 +38,15 @@ class Run:
         self.generar_html()  # Llamada a la función que genera el HTML
 
     def __busqueda_tag__(self):
-        tag = raw_input('Introduce el Hashtag: ')  # Pedir y guardar el hashtag
-        print('Espere un momento...')  # Mensaje de espera
+        tag = raw_input('Introduce el nombre del Hashtag: ')  # Pedir y guardar el hashtag
+        print('Cargando...')  # Mensaje de espera
         self.__agregar_imagenes__(self.search_i.por_tag(tag))  # Realiza la busqueda en Instagram y guarda las imágenes
 
         self.__agregar_imagenes__(self.search_t.buscar_por_tags(tag))  # Realiza busqueda en Twitter
                                                                        # y guarda las imágenes
 
     def __busqueda_popular__(self):
-        print('Espere un momento...')  # Mensaje de espera
+        print('Cargando...')  # Mensaje de espera
         self.__agregar_imagenes__(self.search_i.media_popular())  # Realiza la busqueda en Instagram y
                                                                   #  guarda las imágenes
 
@@ -55,9 +55,9 @@ class Run:
 
     def __busqueda_coordenadas__(self):
         print('Mapa: http://www.bufa.es/google-maps-latitud-longitud/')  # Muestra link de mapa
-        latitud = float(raw_input('\tLatitud: '))  # Pide latitud y guarda
-        longitud = float(raw_input('\tLongitud: '))  # Pide longitud y guarda
-        print('Espere un momento...')  # Mensaje de espera
+        latitud = float(raw_input('\tLat: '))  # Pide latitud y guarda
+        longitud = float(raw_input('\tLong: '))  # Pide longitud y guarda
+        print('Cargando...')  # Mensaje de espera
         self.__agregar_imagenes__(self.search_i.por_coordenadas(latitud, longitud))  # Realiza la busqueda en Instagram
                                                                                      # y guarda las imágenes
 
@@ -86,7 +86,7 @@ class Run:
         lista_ordenada = ordenador.por_fecha(respuesta2) if respuesta is 1 else ordenador.por_usuario(respuesta2)
         # Guarda la lista ya ordenada
 
-        nombre = raw_input('Nombre del proyecto: ')  # Pedir y guardar nombre del Proyecto para la carpeta
+        nombre = raw_input('Nombre del directorio del Proyecto: ')  # Pedir y guardar nombre del Proyecto para la carpeta
         Peticiones.copiar_archivos_responsive(nombre)  # Copia los archivos necesarios para el HTML en la carpeta
                                                        # del proyeto
 
@@ -103,15 +103,15 @@ class Run:
     @staticmethod
     def __menu_ordenamiento__():
         Peticiones.limpiar_pantalla()  # "Limpia" el shell
-        cprint('\t\tOrdenar Por: ', 'yellow', attrs=['bold'])  # Muestra el mensaje con color y bold
+        cprint('\t\tOrdenar Por: ', 'blue', attrs=['bold'])  # Muestra el mensaje con color y bold
         print('\t1. Fecha')
         print('\t2. Nombre de usuario')
-        return Peticiones.pedir_numero('Elige una opcion: ', 1, 2)  # Devuelve la opción elegida
+        return Peticiones.pedir_numero('Escoge la acción que desees realizar: ', 1, 2)  # Devuelve la opción elegida
 
     @staticmethod
     def __menu_tipo_busqueda__():
         cprint('1. Por hashtag')
-        cprint('2. Popular ')
+        cprint('2. Por popularidad ')
         cprint('3. Por coordenadas')
 
 run = Run()

@@ -25,9 +25,9 @@ class Peticiones:
                 if limite_izquierda <= numero <= limite_derecha:
                     return numero
                 else:
-                    print('Número no válido.')
+                    print('Error introduce un número válido')
             except ValueError:
-                print('Valor no válido, introduce uno correcto.')
+                print('Error introduce un número válido')
             except Exception, e:
                 print 'Error peticiones la clase es: ' + str(e.__class__)
 
