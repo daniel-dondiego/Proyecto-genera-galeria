@@ -5,16 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Página que muestra imagenes traídas de Instagram.">
-    <meta name="author" content="MikeAndBlak">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/galeria.css" rel="stylesheet">
-    <title>Imagenes Instagram</title>
+    <title>Galería de imágenes</title>
 </head>
 
 <body>
     <div class="col-lg-12">
-        <h1 class="page-header">Galería Instagram</h1>
+        <h1 class="page-header">Galería de imágenes</h1>
     </div>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
